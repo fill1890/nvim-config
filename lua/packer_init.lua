@@ -78,6 +78,8 @@ function M.setup()
 
         require'plugins.hover'.setup(use)
 
+        use { 'tpope/vim-fugitive' }
+
         if packer_bootstrap then
             print "Restart required after install!"
             require'packer'.sync()
