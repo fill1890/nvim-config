@@ -80,6 +80,8 @@ function M.setup()
 
         use { 'tpope/vim-fugitive' }
 
+        require'plugins.tree-context'.setup(use)
+
         if packer_bootstrap then
             print "Restart required after install!"
             require'packer'.sync()
