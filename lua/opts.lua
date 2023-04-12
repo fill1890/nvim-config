@@ -14,8 +14,13 @@ opt.wildmenu = true                     -- command completion
 
 opt.shiftround = true                   -- round <Tab> to tabs
 opt.tabstop = 4                         -- 4 space tab character
+<<<<<<< HEAD
 opt.softtabstop = 4                     -- 4 space <Tab> key
 opt.shiftwidth = 4                      -- 4 space auto indent
+=======
+opt.softtabstop = 4                      -- 4 space <Tab> key
+opt.shiftwidth = 4                      -- 4 space audo indent
+>>>>>>> master
 opt.expandtab = true                    -- spaces instead of tabs
 
 -- UI Config

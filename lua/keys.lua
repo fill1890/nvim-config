@@ -36,9 +36,10 @@ remap('n', '<Leader>ev', ':vsp $MYVIMRC<CR>', noremap)
 remap('n', '<Leader>sv', ':source $MYVIMRC<CR>', noremap)
 -- use \t to use tab picker (barbar)
 remap('n', '<Leader>t', '<cmd>TroubleToggle<cr>', noremap)
-
 -- use ? to comment
 remap('n', '?', 'gcc', {})
+-- use \d to generate autodoc (Neogen)
+remap('n', '<Leader>d', ':Neogen<CR>', noremap)
 
 -- }}}
 

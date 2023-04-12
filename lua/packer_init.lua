@@ -61,7 +61,6 @@ function M.setup()
 
         -- filetree
         --require'plugins.tree'.setup(use)
-
         -- resume editing
         use { 'farmergreg/vim-lastplace' }
 
@@ -82,6 +81,10 @@ function M.setup()
 
         -- fun trouble things
         require'plugins.trouble'.setup(use)
+
+        require'plugins.neogen'.setup(use)
+
+        require'plugins.tree-context'.setup(use)
 
         if packer_bootstrap then
             print "Restart required after install!"
