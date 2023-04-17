@@ -25,19 +25,11 @@ kremap('n', 'gi', vim.lsp.buf.implementation, noremap)
 kremap('n', '<Leader>c', vim.lsp.buf.rename, noremap)
 
 -- use \r to run files with a shebang line
-remap('n', '<Leader>r', ':!./%<CR>', noremap)
--- use \f to open file tree
-remap('n', '<Leader>f', ':NvimTreeToggle<CR>', noremap)
+remap('n', '<Leader>r', '<cmd>!./%<CR>', noremap)
 -- use \ev to edit vimrc
-remap('n', '<Leader>ev', ':vsp $MYVIMRC<CR>', noremap)
+remap('n', '<Leader>ev', '<cmd>vsp $MYVIMRC<CR>', noremap)
 -- use \sv to source vimrc
-remap('n', '<Leader>sv', ':source $MYVIMRC<CR>', noremap)
--- use \t to use tab picker (barbar)
-remap('n', '<Leader>t', '<cmd>TroubleToggle<cr>', noremap)
--- use ? to comment
-remap('n', '?', 'gcc', {})
--- use \d to generate autodoc (Neogen)
-remap('n', '<Leader>d', ':Neogen<CR>', noremap)
+remap('n', '<Leader>sv', '<cmd>source $MYVIMRC<CR>', noremap)
 
 -- }}}
 

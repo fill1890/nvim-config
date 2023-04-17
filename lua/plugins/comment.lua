@@ -10,6 +10,8 @@ function M.setup(use)
             })
         end
     }
+
+    vim.keymap.set('n', '?', 'gcc', { desc = 'Comment.nvim: Toggle comment' })
 end
 
 return M

@@ -10,6 +10,8 @@ function M.setup(use)
             })
         end
     }
+
+    vim.keymap.set('n', '<Leader>t', '<cmd>TroubleToggle<cr>')
 end
 
 return M
