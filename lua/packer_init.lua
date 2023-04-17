@@ -84,7 +84,9 @@ function M.setup()
 
         require'plugins.neogen'.setup(use)
 
-        require'plugins.tree-context'.setup(use)
+        require'plugins.hover'.setup(use)
+
+        require'plugins.join'.setup(use)
 
         if packer_bootstrap then
             print "Restart required after install!"

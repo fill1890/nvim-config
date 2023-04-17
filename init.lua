@@ -29,6 +29,7 @@ cmd('highlight Comment cterm=italic')
 cmd([[autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif]])
 
 cmd('autocmd FileType markdown setlocal spell')
+cmd('autocmd FileType gitcommit setlocal spell')
 
 -- Autopair keybinding {{{
 

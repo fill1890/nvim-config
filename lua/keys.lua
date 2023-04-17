@@ -16,8 +16,6 @@ remap('i', 'jk', '<Esc>', noremap)
 remap('n', '<space>', 'za', noremap)
 
 -- LSP keybinds
--- K to lookup definition (hover window)
-kremap('n', 'K', vim.lsp.buf.hover, noremap)
 -- gd and gD to go to definition/declaration
 kremap('n', 'gd', vim.lsp.buf.definition, noremap)
 kremap('n', 'gD', vim.lsp.buf.declaration, noremap)
