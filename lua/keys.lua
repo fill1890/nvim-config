@@ -21,7 +21,7 @@ kremap('n', 'gd', vim.lsp.buf.definition, noremap)
 kremap('n', 'gD', vim.lsp.buf.declaration, noremap)
 -- gi to go to implementation
 kremap('n', 'gi', vim.lsp.buf.implementation, noremap)
--- \r to rename
+-- \c to rename
 kremap('n', '<Leader>c', vim.lsp.buf.rename, noremap)
 
 -- use \r to run files with a shebang line
@@ -30,6 +30,9 @@ remap('n', '<Leader>r', '<cmd>!./%<CR>', noremap)
 remap('n', '<Leader>ev', '<cmd>vsp $MYVIMRC<CR>', noremap)
 -- use \sv to source vimrc
 remap('n', '<Leader>sv', '<cmd>source $MYVIMRC<CR>', noremap)
+remap('n', '?', 'gcc', {})
+-- use \n to toggle relative numbers
+remap('n', '<Leader>n', '<cmd>set rnu!<CR>', {})
 
 -- }}}
 
