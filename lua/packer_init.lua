@@ -88,6 +88,10 @@ function M.setup()
 
         require'plugins.join'.setup(use)
 
+        require'plugins.overlength'.setup(use)
+
+        require'plugins.guess-indent'.setup(use)
+
         if packer_bootstrap then
             print "Restart required after install!"
             require'packer'.sync()
