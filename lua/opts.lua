@@ -49,3 +49,4 @@ opt.foldnestmax = 10
 -- Spell check
 opt.spelllang = 'en_au'
 
+vim.cmd([[command SortImports %s/import\s*\zs.*/\=join(sort(split(submatch(0), '\s*,\s*')),', ')]])
