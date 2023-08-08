@@ -35,6 +35,24 @@ function M.setup(use)
 
             lsp.jdtls.setup(c_prep{ on_attach = keybinds })
 
+            lsp.spectral.setup(c_prep{ on_attach = keybinds })
+
+            lsp.ltex.setup(c_prep{
+                settings = {ltex = {
+                    language = 'en-AU',
+                    enabled = {
+                        'latex', 'markdown', 'restructuredtext',
+                        'python',
+                    }
+                }},
+                filetypes = {
+                    'bib', 'gitcommit', 'markdown', 'org', 'plaintex',
+                    'tex', 'rst', 'pandoc', 'python', 'lua',
+                },
+
+                on_attach = keybinds
+            })
+
             lsp.lua_ls.setup(c_prep{
                 settings = {
                     Lua = {
