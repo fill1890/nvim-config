@@ -1,14 +1,12 @@
-local M = {}
-
-function M.setup(use)
-    use {
+return {
+    {
         'williamboman/mason.nvim',
-        requires = 'williamboman/mason-lspconfig',
-        config = function()
-            require'mason'.setup()
-            require'mason-lspconfig'.setup()
-        end
+        lazy = false,
+    },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        dependencies = 'williamboman/mason.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        lazy = false,
     }
-end
-
-return M
+}

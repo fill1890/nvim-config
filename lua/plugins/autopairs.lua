@@ -1,16 +1,11 @@
-local M = {}
-
-function M.setup(use)
-    use {
-        'windwp/nvim-autopairs',
-        config = function()
-            require'nvim-autopairs'.setup({
-                map_bs = false,
-                map_cr = false,
-                check_ts = true
-            })
-        end
+return {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+    opts = {
+        map_bs = false,
+        map_cs = false,
+        check_ts = true
     }
-end
+}
 
-return M

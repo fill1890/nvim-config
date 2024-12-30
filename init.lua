@@ -2,17 +2,14 @@ local cmd = vim.api.nvim_command
 local remap = vim.api.nvim_set_keymap
 
 -- Plugins
-
--- other plugins
-require 'packer_init'.setup()
+--require 'packer_init'.setup()
+require 'config.lazy'
 
 -- Imports
 
 require 'keys'
 require 'opts'
-
 -- Commands
-
 -- 256 colour
 cmd('set t_Co=256')
 

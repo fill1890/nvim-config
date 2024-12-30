@@ -1,16 +1,15 @@
-local M = {}
-
-function M.setup(use)
-    use {
-        'romgrk/barbar.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function()
-            require 'bufferline'.setup {
-                auto_hide = true,
-                closable = false,
-            }
-        end
-    }
-end
-
-return M
+return  {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+        auto_hide = true,
+        icons = {
+            button = '',
+            modified = { button = '' },
+        }
+    },
+}

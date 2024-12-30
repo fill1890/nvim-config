@@ -92,6 +92,13 @@ function M.setup()
 
         require'plugins.guess-indent'.setup(use)
 
+        -- matching of token under cursor
+        -- caused high CPU use on large files
+        --use { 'RRethy/vim-illuminate' }
+
+        -- highlight trailing whitespace
+        require'plugins.whitespace'.setup(use)
+
         if packer_bootstrap then
             print "Restart required after install!"
             require'packer'.sync()

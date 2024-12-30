@@ -1,17 +1,10 @@
-local M = {}
-
-function M.setup(use)
-    use {
-        'folke/trouble.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require'trouble'.setup({
-                mode = 'document_diagnostics',
-            })
-        end
-    }
-
-    vim.keymap.set('n', '<Leader>t', '<cmd>TroubleToggle<cr>')
-end
-
-return M
+return {
+    'folke/trouble.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    keys = {
+        { '<Leader>t', '<cmd>Trouble diagnostics toggle focus=false filter.buf=0<cr>'}
+    },
+    opts = {
+        mode = 'document_diagnostics',
+    },
+}

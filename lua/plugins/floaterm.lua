@@ -1,9 +1,4 @@
-local M = {}
+return {
+	'voldikss/vim-floaterm',
+}
 
-function M.setup(use)
-    use {
-        'voldikss/vim-floaterm',
-    }
-end
-
-return M
