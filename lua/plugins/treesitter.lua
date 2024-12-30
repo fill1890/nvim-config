@@ -1,34 +1,35 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
 
-    build = function()
-	local ts_update = require('nvim-treesitter.install').update({ with_sync = true})
-	ts_update()
+    config = function()
+        local configs = require('nvim-treesitter.configs')
+        configs.setup({
+            ensure_installed = {
+                "c",
+                "java",
+                "javascript",
+                "python",
+                "cpp",
+                "make",
+                "markdown",
+                "vim",
+                "lua",
+                "markdown_inline",
+            },
+            highlight = {
+                enable = true,
+            },
+            sync_install = false,
+        })
     end,
 
-    opts = {
-        ensure_installed = {
-            "c",
-            "java",
-            "javascript",
-            "python",
-            "cpp",
-            "make",
-            "markdown",
-            "vim",
-            "lua"
-        },
-        highlight = {
-            enable = true
-        },
-    },
-
     init = function()
-	vim.cmd 'set autoindent'
-	vim.cmd 'filetype plugin indent on'
+        vim.cmd 'set autoindent'
+        vim.cmd 'filetype plugin indent on'
 
-	vim.opt.foldmethod = 'expr'
-	vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+        vim.opt.foldmethod = 'expr'
+        vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
     end,
 }
 
